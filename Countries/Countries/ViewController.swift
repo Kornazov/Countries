@@ -11,6 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        APIClient.shared.getCharacters { [weak self] result in
+            print(result)
+        }
         // Do any additional setup after loading the view.
     }
 

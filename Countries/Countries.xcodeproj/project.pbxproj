@@ -13,6 +13,18 @@
 		29317A8529C0D10A0018D309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29317A8329C0D10A0018D309 /* Main.storyboard */; };
 		29317A8729C0D10C0018D309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29317A8629C0D10C0018D309 /* Assets.xcassets */; };
 		29317A8A29C0D10C0018D309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29317A8829C0D10C0018D309 /* LaunchScreen.storyboard */; };
+		29317A9329C0D1D10018D309 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317A9229C0D1D10018D309 /* CountriesModel.swift */; };
+		29317A9529C0D1EE0018D309 /* CountriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317A9429C0D1EE0018D309 /* CountriesRequest.swift */; };
+		29317A9F29C0D36F0018D309 /* URLRequest+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317A9E29C0D36F0018D309 /* URLRequest+Factory.swift */; };
+		29317AA129C0D38B0018D309 /* URLComponents+APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317AA029C0D38B0018D309 /* URLComponents+APIRequest.swift */; };
+		29317AA929C0D3A50018D309 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317AA229C0D3A50018D309 /* APIRequest.swift */; };
+		29317AAA29C0D3A50018D309 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317AA329C0D3A50018D309 /* APIClient.swift */; };
+		29317AAB29C0D3A50018D309 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317AA429C0D3A50018D309 /* BaseRequest.swift */; };
+		29317AAC29C0D3A50018D309 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317AA529C0D3A50018D309 /* NetworkConfig.swift */; };
+		29317AAD29C0D3A50018D309 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317AA629C0D3A50018D309 /* NetworkOperation.swift */; };
+		29317AAE29C0D3A50018D309 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317AA729C0D3A50018D309 /* AsyncOperation.swift */; };
+		29317AAF29C0D3A50018D309 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317AA829C0D3A50018D309 /* NetworkService.swift */; };
+		29AE5E9829C0D5EB0037FDA8 /* CountriesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE5E9729C0D5EB0037FDA8 /* CountriesOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		29317A8629C0D10C0018D309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29317A8929C0D10C0018D309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29317A8B29C0D10C0018D309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29317A9229C0D1D10018D309 /* CountriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
+		29317A9429C0D1EE0018D309 /* CountriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRequest.swift; sourceTree = "<group>"; };
+		29317A9E29C0D36F0018D309 /* URLRequest+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Factory.swift"; sourceTree = "<group>"; };
+		29317AA029C0D38B0018D309 /* URLComponents+APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLComponents+APIRequest.swift"; sourceTree = "<group>"; };
+		29317AA229C0D3A50018D309 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		29317AA329C0D3A50018D309 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		29317AA429C0D3A50018D309 /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		29317AA529C0D3A50018D309 /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		29317AA629C0D3A50018D309 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		29317AA729C0D3A50018D309 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		29317AA829C0D3A50018D309 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		29AE5E9729C0D5EB0037FDA8 /* CountriesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,8 @@
 		29317A7C29C0D10A0018D309 /* Countries */ = {
 			isa = PBXGroup;
 			children = (
+				29317A9C29C0D3540018D309 /* Networking */,
+				29317A9129C0D1B30018D309 /* Countries Networking  */,
 				29317A7D29C0D10A0018D309 /* AppDelegate.swift */,
 				29317A7F29C0D10A0018D309 /* SceneDelegate.swift */,
 				29317A8129C0D10A0018D309 /* ViewController.swift */,
@@ -65,6 +91,40 @@
 				29317A8B29C0D10C0018D309 /* Info.plist */,
 			);
 			path = Countries;
+			sourceTree = "<group>";
+		};
+		29317A9129C0D1B30018D309 /* Countries Networking  */ = {
+			isa = PBXGroup;
+			children = (
+				29317A9229C0D1D10018D309 /* CountriesModel.swift */,
+				29317A9429C0D1EE0018D309 /* CountriesRequest.swift */,
+				29AE5E9729C0D5EB0037FDA8 /* CountriesOperation.swift */,
+			);
+			path = "Countries Networking ";
+			sourceTree = "<group>";
+		};
+		29317A9C29C0D3540018D309 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				29317AA329C0D3A50018D309 /* APIClient.swift */,
+				29317AA229C0D3A50018D309 /* APIRequest.swift */,
+				29317AA729C0D3A50018D309 /* AsyncOperation.swift */,
+				29317AA429C0D3A50018D309 /* BaseRequest.swift */,
+				29317AA529C0D3A50018D309 /* NetworkConfig.swift */,
+				29317AA629C0D3A50018D309 /* NetworkOperation.swift */,
+				29317AA829C0D3A50018D309 /* NetworkService.swift */,
+				29317A9D29C0D3610018D309 /* Factory */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		29317A9D29C0D3610018D309 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				29317A9E29C0D36F0018D309 /* URLRequest+Factory.swift */,
+				29317AA029C0D38B0018D309 /* URLComponents+APIRequest.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +198,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29317AA129C0D38B0018D309 /* URLComponents+APIRequest.swift in Sources */,
+				29317A9329C0D1D10018D309 /* CountriesModel.swift in Sources */,
+				29317AAC29C0D3A50018D309 /* NetworkConfig.swift in Sources */,
 				29317A8229C0D10A0018D309 /* ViewController.swift in Sources */,
+				29317AAA29C0D3A50018D309 /* APIClient.swift in Sources */,
+				29317AAE29C0D3A50018D309 /* AsyncOperation.swift in Sources */,
+				29317AAD29C0D3A50018D309 /* NetworkOperation.swift in Sources */,
+				29317A9529C0D1EE0018D309 /* CountriesRequest.swift in Sources */,
+				29AE5E9829C0D5EB0037FDA8 /* CountriesOperation.swift in Sources */,
+				29317AAB29C0D3A50018D309 /* BaseRequest.swift in Sources */,
+				29317AAF29C0D3A50018D309 /* NetworkService.swift in Sources */,
+				29317A9F29C0D36F0018D309 /* URLRequest+Factory.swift in Sources */,
 				29317A7E29C0D10A0018D309 /* AppDelegate.swift in Sources */,
+				29317AA929C0D3A50018D309 /* APIRequest.swift in Sources */,
 				29317A8029C0D10A0018D309 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
