@@ -25,6 +25,15 @@
 		29317AAE29C0D3A50018D309 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317AA729C0D3A50018D309 /* AsyncOperation.swift */; };
 		29317AAF29C0D3A50018D309 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317AA829C0D3A50018D309 /* NetworkService.swift */; };
 		29AE5E9829C0D5EB0037FDA8 /* CountriesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE5E9729C0D5EB0037FDA8 /* CountriesOperation.swift */; };
+		29AE5E9F29C0DAD90037FDA8 /* CountriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE5E9D29C0DAD90037FDA8 /* CountriesTableViewCell.swift */; };
+		29AE5EA029C0DAD90037FDA8 /* CountriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AE5E9E29C0DAD90037FDA8 /* CountriesTableViewCell.xib */; };
+		29AE5EA229C0DF490037FDA8 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE5EA129C0DF490037FDA8 /* CountriesViewModel.swift */; };
+		29AE5EA529C0E64B0037FDA8 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 29AE5EA429C0E64B0037FDA8 /* SVGKit */; };
+		29AE5EA729C0E64B0037FDA8 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29AE5EA629C0E64B0037FDA8 /* SVGKitSwift */; };
+		29AE5EAA29C0E6F20037FDA8 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 29AE5EA929C0E6F20037FDA8 /* SVGKit */; };
+		29AE5EAC29C0E6F20037FDA8 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29AE5EAB29C0E6F20037FDA8 /* SVGKitSwift */; };
+		29AE5EB029C116060037FDA8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE5EAF29C116060037FDA8 /* DetailsViewController.swift */; };
+		29AE5EB229C118F30037FDA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE5EB129C118F30037FDA8 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +57,11 @@
 		29317AA729C0D3A50018D309 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		29317AA829C0D3A50018D309 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		29AE5E9729C0D5EB0037FDA8 /* CountriesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesOperation.swift; sourceTree = "<group>"; };
+		29AE5E9D29C0DAD90037FDA8 /* CountriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewCell.swift; sourceTree = "<group>"; };
+		29AE5E9E29C0DAD90037FDA8 /* CountriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountriesTableViewCell.xib; sourceTree = "<group>"; };
+		29AE5EA129C0DF490037FDA8 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		29AE5EAF29C116060037FDA8 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		29AE5EB129C118F30037FDA8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +69,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29AE5EAC29C0E6F20037FDA8 /* SVGKitSwift in Frameworks */,
+				29AE5EAA29C0E6F20037FDA8 /* SVGKit in Frameworks */,
+				29AE5EA729C0E64B0037FDA8 /* SVGKitSwift in Frameworks */,
+				29AE5EA529C0E64B0037FDA8 /* SVGKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +107,10 @@
 				29317A8629C0D10C0018D309 /* Assets.xcassets */,
 				29317A8829C0D10C0018D309 /* LaunchScreen.storyboard */,
 				29317A8B29C0D10C0018D309 /* Info.plist */,
+				29AE5E9D29C0DAD90037FDA8 /* CountriesTableViewCell.swift */,
+				29AE5E9E29C0DAD90037FDA8 /* CountriesTableViewCell.xib */,
+				29AE5EA129C0DF490037FDA8 /* CountriesViewModel.swift */,
+				29AE5EAF29C116060037FDA8 /* DetailsViewController.swift */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -99,6 +121,7 @@
 				29317A9229C0D1D10018D309 /* CountriesModel.swift */,
 				29317A9429C0D1EE0018D309 /* CountriesRequest.swift */,
 				29AE5E9729C0D5EB0037FDA8 /* CountriesOperation.swift */,
+				29AE5EB129C118F30037FDA8 /* MapViewController.swift */,
 			);
 			path = "Countries Networking ";
 			sourceTree = "<group>";
@@ -143,6 +166,12 @@
 			dependencies = (
 			);
 			name = Countries;
+			packageProductDependencies = (
+				29AE5EA429C0E64B0037FDA8 /* SVGKit */,
+				29AE5EA629C0E64B0037FDA8 /* SVGKitSwift */,
+				29AE5EA929C0E6F20037FDA8 /* SVGKit */,
+				29AE5EAB29C0E6F20037FDA8 /* SVGKitSwift */,
+			);
 			productName = Countries;
 			productReference = 29317A7A29C0D10A0018D309 /* Countries.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +200,10 @@
 				Base,
 			);
 			mainGroup = 29317A7129C0D10A0018D309;
+			packageReferences = (
+				29AE5EA329C0E64B0037FDA8 /* XCRemoteSwiftPackageReference "SVGKit" */,
+				29AE5EA829C0E6F20037FDA8 /* XCRemoteSwiftPackageReference "SVGKit" */,
+			);
 			productRefGroup = 29317A7B29C0D10A0018D309 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,6 +220,7 @@
 			files = (
 				29317A8A29C0D10C0018D309 /* LaunchScreen.storyboard in Resources */,
 				29317A8729C0D10C0018D309 /* Assets.xcassets in Resources */,
+				29AE5EA029C0DAD90037FDA8 /* CountriesTableViewCell.xib in Resources */,
 				29317A8529C0D10A0018D309 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,9 +238,13 @@
 				29317A8229C0D10A0018D309 /* ViewController.swift in Sources */,
 				29317AAA29C0D3A50018D309 /* APIClient.swift in Sources */,
 				29317AAE29C0D3A50018D309 /* AsyncOperation.swift in Sources */,
+				29AE5E9F29C0DAD90037FDA8 /* CountriesTableViewCell.swift in Sources */,
+				29AE5EB229C118F30037FDA8 /* MapViewController.swift in Sources */,
 				29317AAD29C0D3A50018D309 /* NetworkOperation.swift in Sources */,
 				29317A9529C0D1EE0018D309 /* CountriesRequest.swift in Sources */,
 				29AE5E9829C0D5EB0037FDA8 /* CountriesOperation.swift in Sources */,
+				29AE5EA229C0DF490037FDA8 /* CountriesViewModel.swift in Sources */,
+				29AE5EB029C116060037FDA8 /* DetailsViewController.swift in Sources */,
 				29317AAB29C0D3A50018D309 /* BaseRequest.swift in Sources */,
 				29317AAF29C0D3A50018D309 /* NetworkService.swift in Sources */,
 				29317A9F29C0D36F0018D309 /* URLRequest+Factory.swift in Sources */,
@@ -430,6 +468,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29AE5EA329C0E64B0037FDA8 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		29AE5EA829C0E6F20037FDA8 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit";
+			requirement = {
+				branch = 3.x;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29AE5EA429C0E64B0037FDA8 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29AE5EA329C0E64B0037FDA8 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		29AE5EA629C0E64B0037FDA8 /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29AE5EA329C0E64B0037FDA8 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
+		};
+		29AE5EA929C0E6F20037FDA8 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29AE5EA829C0E6F20037FDA8 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		29AE5EAB29C0E6F20037FDA8 /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29AE5EA829C0E6F20037FDA8 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 29317A7229C0D10A0018D309 /* Project object */;
 }
