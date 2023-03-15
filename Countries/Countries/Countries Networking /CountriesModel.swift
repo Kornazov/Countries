@@ -13,14 +13,20 @@ struct CountriesResponse: Codable {
 }
 
 enum Region: String, Codable {
-    case africa = "Africa"
-    case americas = "Americas"
-    case antarctic = "Antarctic"
-    case antarcticOcean = "Antarctic Ocean"
-    case asia = "Asia"
-    case europe = "Europe"
-    case oceania = "Oceania"
-    case polar = "Polar"
+    case Africa = "Africa"
+    case Americas = "Americas"
+    case Antarctic = "Antarctic"
+    case AntarcticOcean = "Antarctic Ocean"
+    case Asia = "Asia"
+    case Europe = "Europe"
+    case Oceania = "Oceania"
+    case Polar = "Polar"
 }
 
 typealias Countries = [CountriesResponse]
+
+extension Countries: Equatable {
+     static func == (lhs: Countries, rhs: Countries) -> Bool {
+         lhs.count == rhs.count // <-- here, whatever is appropriate for you
+     }
+ }

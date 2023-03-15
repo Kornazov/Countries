@@ -9,17 +9,13 @@ protocol CountriesViewModelDelegate: AnyObject {
 class CountriesViewModel {
     
     weak var delegate: CountriesViewModelDelegate?
+    private var shouldSortAndReloadDataAfterProperSearch = false
     var countries: Countries? {
         didSet {
-            filterCountries = countries?.sorted { $0.population > $1.population }
+            filterCountries = countries
         }
     }
     var searchString: String? {
-        didSet {
-            filterData()
-        }
-    }
-    var numberForSeason: Int? {
         didSet {
             filterData()
         }
@@ -31,46 +27,21 @@ class CountriesViewModel {
         APIClient.shared.getCharacters { [weak self] result in
             switch result {
             case .success(let response):
-                print(response)
-                self?.countries = response
+                self?.countries = response?.sorted { $0.population > $1.population }
                 self?.delegate?.reloadData()
             case .failure(let error):
                 print(error)
             }
         }
-    }
-    
-    func loadDataTest(completion: @escaping(Result<Countries?, Error>) -> Void) {
-        APIClient.shared.getCharacters { [weak self] result in
-            switch result {
-            case .success(let response):
-                self?.countries = response
-                self?.delegate?.reloadData()
-            case .failure(let error):
-                print(error)
-            }
-           // completion(result)
-        }
-    }
-    
-    func showAllCharacters() {
-        numberForSeason = nil
-        filterCountries = countries
     }
     
     func filterData() {
-        if let searchString = searchString, let season = numberForSeason {
-          //  filterCountries = countries?.filter({ ( $0.appearance?.contains(season) ?? false) && ($0.name?.lowercased().contains(searchString) ?? false) })
+        if let searchString = searchString, searchString.count > 2 {
+            let searchedCountries = countries?.filter({ ($0.name.lowercased().contains(searchString))})
+            filterCountries = searchedCountries
             delegate?.reloadData()
             return
         }
-        
-        if let searchString = searchString {
-            filterCountries = countries?.filter({ ($0.name.lowercased().contains(searchString) ?? false)})
-            delegate?.reloadData()
-            return
-        }
-        
         filterCountries = countries
         delegate?.reloadData()
     }

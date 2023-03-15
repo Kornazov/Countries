@@ -2,6 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var countriesTableView: UITableView!
     
@@ -10,10 +11,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Sets this view controller as presenting view controller for the search interface
+        definesPresentationContext = true
         viewModel.delegate = self
+        setupSearchBar()
         viewModel.loadData()
         registerXib()
-        setupView()
         setupTableView()
     }
     
@@ -24,12 +27,23 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
     }
     
-    private func setupView() {
-        let gradient = CAGradientLayer()
-        gradient.frame = view.bounds
-        gradient.colors = [UIColor.systemPink.cgColor, UIColor.systemBlue.cgColor]
-        self.view.layer.insertSublayer(gradient, at: 0)
+
+    private func setupSearchBar() {
+        searchBar.barTintColor = UIColor.clear
+        searchBar.searchTextField.textColor = .white
+        searchBar.backgroundColor = UIColor.clear
+        searchBar.isTranslucent = true
+        searchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        searchBar.searchTextField.backgroundColor = .clear
+        searchBar.delegate = self
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        countriesTableView.reloadData()
+
+    }
+    
     private func setupTableView() {
         countriesTableView.dataSource = self
         countriesTableView.delegate = self
@@ -65,9 +79,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as? CountriesTableViewCell else { return UITableViewCell() }
         let index = indexPath.item
-        let country = viewModel.filterCountries?[index]
-        cell.countryLabel.text = country?.name
-        cell.countryImage.downloadedsvg(from: URL(string: country!.flag)!)
+        guard let country = viewModel.filterCountries?[index] else { return UITableViewCell() }
+        cell.countryLabel.text = country.name
+        cell.countryImage.downloadedsvg(from: URL(string: country.flag)!)
         
         cell.backgroundColor = UIColor.clear.withAlphaComponent(0)
         return cell
@@ -78,8 +92,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "MapViewController") as? MapViewController else {
             return
         }
-       secondViewController.country = country
-       self.navigationController?.pushViewController(secondViewController, animated: true)
+        secondViewController.country = country
+        self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -90,5 +104,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         maskLayer.backgroundColor = UIColor.black.cgColor
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding / 2)
         cell.layer.mask = maskLayer
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            viewModel.searchString = nil
+            return
+        }
+        
+        viewModel.searchString = searchText.lowercased()
     }
 }

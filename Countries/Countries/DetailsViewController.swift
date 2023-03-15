@@ -15,6 +15,18 @@ class CustomModalViewController: UIViewController {
         return label
     }()
     
+    lazy var flagLabel: UILabel = {
+        let label = UILabel()
+        
+        guard let country = country else {
+            return label
+        }
+        
+        label.text =  "Flag of " + country.name
+        label.font = .boldSystemFont(ofSize: 20)
+        return label
+    }()
+    
     lazy var notesLabel: UILabel = {
         let label = UILabel()
         guard let country = country else {
@@ -27,10 +39,24 @@ class CustomModalViewController: UIViewController {
         return label
     }()
     
+    lazy var flagImage: UIImageView = {
+        let image = UIImageView()
+        guard let country = country else {
+            return UIImageView()
+        }
+        image.layer.cornerRadius = 10.0
+        image.clipsToBounds = true
+        image.widthAnchor.constraint(equalToConstant: 140).isActive = true
+        image.heightAnchor.constraint(equalToConstant: 140).isActive = true
+        image.downloadedsvg(from: URL(string: country.flag)!)
+        return image
+    }()
+    
     lazy var contentStackView: UIStackView = {
         let spacer = UIView()
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, notesLabel, spacer])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, notesLabel,flagLabel,flagImage, spacer])
         stackView.axis = .vertical
+        stackView.alignment = .fill
         stackView.spacing = 12.0
         return stackView
     }()
@@ -54,7 +80,7 @@ class CustomModalViewController: UIViewController {
     // Constants
     let defaultHeight: CGFloat = 300
     let dismissibleHeight: CGFloat = 200
-    let maximumContainerHeight: CGFloat = UIScreen.main.bounds.height - 350
+    let maximumContainerHeight: CGFloat = UIScreen.main.bounds.height - 200
     // keep current new height, initial is default height
     var currentContainerHeight: CGFloat = 300
     
