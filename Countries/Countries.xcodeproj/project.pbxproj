@@ -82,8 +82,7 @@
 		29086BA929C2064D006D4F99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				29AE5E9E29C0DAD90037FDA8 /* CountriesTableViewCell.xib */,
-				29AE5E9D29C0DAD90037FDA8 /* CountriesTableViewCell.swift */,
+				29F75FD729C243E10085A93C /* CountriesTableViewCell */,
 				29AE5EAF29C116060037FDA8 /* DetailsViewController.swift */,
 				29317A8129C0D10A0018D309 /* CountriesViewController.swift */,
 				29AE5EB129C118F30037FDA8 /* MapViewController.swift */,
@@ -126,10 +125,9 @@
 		29317A9129C0D1B30018D309 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				29F75FD829C244100085A93C /* CountriesNetworking */,
 				29AE5EA129C0DF490037FDA8 /* CountriesViewModel.swift */,
 				29317A9229C0D1D10018D309 /* CountriesModel.swift */,
-				29317A9429C0D1EE0018D309 /* CountriesRequest.swift */,
-				29AE5E9729C0D5EB0037FDA8 /* CountriesOperation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +154,24 @@
 				29317AA029C0D38B0018D309 /* URLComponents+APIRequest.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		29F75FD729C243E10085A93C /* CountriesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				29AE5E9D29C0DAD90037FDA8 /* CountriesTableViewCell.swift */,
+				29AE5E9E29C0DAD90037FDA8 /* CountriesTableViewCell.xib */,
+			);
+			path = CountriesTableViewCell;
+			sourceTree = "<group>";
+		};
+		29F75FD829C244100085A93C /* CountriesNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				29AE5E9729C0D5EB0037FDA8 /* CountriesOperation.swift */,
+				29317A9429C0D1EE0018D309 /* CountriesRequest.swift */,
+			);
+			path = CountriesNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,9 +419,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZDSB3LHZ44;
+				DEVELOPMENT_TEAM = H3KK5B2KGB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Countries/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -420,6 +437,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Kornazov.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "In House Universal Enterprise";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -431,9 +449,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZDSB3LHZ44;
+				DEVELOPMENT_TEAM = H3KK5B2KGB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Countries/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -448,6 +467,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Kornazov.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "In House Universal Enterprise";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
