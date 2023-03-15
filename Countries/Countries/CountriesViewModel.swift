@@ -7,15 +7,16 @@ protocol CountriesViewModelDelegate: AnyObject {
 }
 
 class CountriesViewModel {
-    
     weak var delegate: CountriesViewModelDelegate?
     private var shouldSortAndReloadDataAfterProperSearch = false
+    
     var countries: Countries? {
         didSet {
             filterCountries = countries
         }
     }
-    var searchString: String? {
+    
+    var searchText: String? {
         didSet {
             filterData()
         }
@@ -36,9 +37,8 @@ class CountriesViewModel {
     }
     
     func filterData() {
-        if let searchString = searchString, searchString.count > 2 {
-            let searchedCountries = countries?.filter({ ($0.name.lowercased().contains(searchString))})
-            filterCountries = searchedCountries
+        if let searchText = searchText, searchText.count > 2 {
+            filterCountries = countries?.filter({ ($0.name.lowercased().contains(searchText))})
             delegate?.reloadData()
             return
         }

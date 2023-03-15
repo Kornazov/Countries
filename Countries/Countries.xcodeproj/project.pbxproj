@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		29317A7E29C0D10A0018D309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317A7D29C0D10A0018D309 /* AppDelegate.swift */; };
 		29317A8029C0D10A0018D309 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317A7F29C0D10A0018D309 /* SceneDelegate.swift */; };
-		29317A8229C0D10A0018D309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317A8129C0D10A0018D309 /* ViewController.swift */; };
+		29317A8229C0D10A0018D309 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29317A8129C0D10A0018D309 /* CountriesViewController.swift */; };
 		29317A8529C0D10A0018D309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29317A8329C0D10A0018D309 /* Main.storyboard */; };
 		29317A8729C0D10C0018D309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29317A8629C0D10C0018D309 /* Assets.xcassets */; };
 		29317A8A29C0D10C0018D309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29317A8829C0D10C0018D309 /* LaunchScreen.storyboard */; };
@@ -40,7 +40,7 @@
 		29317A7A29C0D10A0018D309 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29317A7D29C0D10A0018D309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29317A7F29C0D10A0018D309 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		29317A8129C0D10A0018D309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29317A8129C0D10A0018D309 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		29317A8429C0D10A0018D309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29317A8629C0D10C0018D309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29317A8929C0D10C0018D309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 				29317A9129C0D1B30018D309 /* Countries Networking  */,
 				29317A7D29C0D10A0018D309 /* AppDelegate.swift */,
 				29317A7F29C0D10A0018D309 /* SceneDelegate.swift */,
-				29317A8129C0D10A0018D309 /* ViewController.swift */,
+				29317A8129C0D10A0018D309 /* CountriesViewController.swift */,
 				29317A8329C0D10A0018D309 /* Main.storyboard */,
 				29317A8629C0D10C0018D309 /* Assets.xcassets */,
 				29317A8829C0D10C0018D309 /* LaunchScreen.storyboard */,
@@ -235,7 +235,7 @@
 				29317AA129C0D38B0018D309 /* URLComponents+APIRequest.swift in Sources */,
 				29317A9329C0D1D10018D309 /* CountriesModel.swift in Sources */,
 				29317AAC29C0D3A50018D309 /* NetworkConfig.swift in Sources */,
-				29317A8229C0D10A0018D309 /* ViewController.swift in Sources */,
+				29317A8229C0D10A0018D309 /* CountriesViewController.swift in Sources */,
 				29317AAA29C0D3A50018D309 /* APIClient.swift in Sources */,
 				29317AAE29C0D3A50018D309 /* AsyncOperation.swift in Sources */,
 				29AE5E9F29C0DAD90037FDA8 /* CountriesTableViewCell.swift in Sources */,

@@ -45,6 +45,8 @@ class CustomModalViewController: UIViewController {
             return UIImageView()
         }
         image.layer.cornerRadius = 10.0
+        image.layer.borderWidth = 0.5
+        image.layer.borderColor = UIColor.darkGray.cgColor
         image.clipsToBounds = true
         image.widthAnchor.constraint(equalToConstant: 140).isActive = true
         image.heightAnchor.constraint(equalToConstant: 140).isActive = true

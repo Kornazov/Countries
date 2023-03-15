@@ -1,10 +1,3 @@
-//
-//  CountriesTableViewCell.swift
-//  Countries
-//
-//  Created by Kristiyan Kornazov on 14.03.23.
-//
-
 import UIKit
 import SVGKit
 
@@ -15,15 +8,11 @@ class CountriesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
-    
 }
 
 extension UIImageView {
