@@ -5,15 +5,23 @@ class CustomModalViewController: UIViewController {
     var country: CountriesResponse?
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Get Started"
+        
+        guard let country = country else {
+            return label
+        }
+        
+        label.text = country.name
         label.font = .boldSystemFont(ofSize: 20)
         return label
     }()
     
     lazy var notesLabel: UILabel = {
         let label = UILabel()
-        label.text = "The capital of \(country?.name ?? "") is \(country?.capitalName ?? ""). \(country?.name ?? "") is located in \(country?.region ?? Region.americas). The subregion is \(country?.subregion ?? ""). The population is \(country?.population ?? 1)"
-        label.font = .systemFont(ofSize: 16)
+        guard let country = country else {
+            return label
+        }
+        label.text = "The capital of \(country.name) is \(country.capitalName). \(country.name) is located in \(country.region). The subregion is \(country.subregion). The population is \(country.population). \(country.code) is the code of the country. \(country.latLng.first ?? 0.0) is the Latitude and the \(country.latLng.last ?? 0.0) is the longitude of \(country.capitalName)."
+        label.font = .systemFont(ofSize: 18)
         label.textColor = .darkGray
         label.numberOfLines = 0
         return label
@@ -46,7 +54,7 @@ class CustomModalViewController: UIViewController {
     // Constants
     let defaultHeight: CGFloat = 300
     let dismissibleHeight: CGFloat = 200
-    let maximumContainerHeight: CGFloat = UIScreen.main.bounds.height - 64
+    let maximumContainerHeight: CGFloat = UIScreen.main.bounds.height - 350
     // keep current new height, initial is default height
     var currentContainerHeight: CGFloat = 300
     
@@ -105,15 +113,9 @@ class CustomModalViewController: UIViewController {
             contentStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
             contentStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
         ])
-        
-        // Set dynamic constraints
-        // First, set container to default height
-        // after panning, the height can expand
+
         containerViewHeightConstraint = containerView.heightAnchor.constraint(equalToConstant: defaultHeight)
         
-        // By setting the height to default height, the container will be hide below the bottom anchor view
-        // Later, will bring it up by set it to 0
-        // set the constant to default height to bring it down again
         containerViewBottomConstraint = containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: defaultHeight)
         // Activate constraints
         containerViewHeightConstraint?.isActive = true
@@ -149,10 +151,6 @@ class CustomModalViewController: UIViewController {
                 view.layoutIfNeeded()
             }
         case .ended:
-            // This happens when user stop drag,
-            // so we will get the last height of container
-            
-            // Condition 1: If new height is below min, dismiss controller
             if newHeight < dismissibleHeight {
                 self.animateDismissView()
             }
