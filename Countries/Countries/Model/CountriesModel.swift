@@ -24,9 +24,3 @@ enum Region: String, Codable {
 }
 
 typealias Countries = [CountriesResponse]
-
-extension Countries: Equatable {
-     static func == (lhs: Countries, rhs: Countries) -> Bool {
-         lhs.count == rhs.count // <-- here, whatever is appropriate for you
-     }
- }

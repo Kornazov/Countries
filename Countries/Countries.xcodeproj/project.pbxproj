@@ -79,6 +79,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29086BA929C2064D006D4F99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29AE5E9E29C0DAD90037FDA8 /* CountriesTableViewCell.xib */,
+				29AE5E9D29C0DAD90037FDA8 /* CountriesTableViewCell.swift */,
+				29AE5EAF29C116060037FDA8 /* DetailsViewController.swift */,
+				29317A8129C0D10A0018D309 /* CountriesViewController.swift */,
+				29AE5EB129C118F30037FDA8 /* MapViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		29317A7129C0D10A0018D309 = {
 			isa = PBXGroup;
 			children = (
@@ -98,32 +110,28 @@
 		29317A7C29C0D10A0018D309 /* Countries */ = {
 			isa = PBXGroup;
 			children = (
+				29086BA929C2064D006D4F99 /* Views */,
 				29317A9C29C0D3540018D309 /* Networking */,
-				29317A9129C0D1B30018D309 /* Countries Networking  */,
+				29317A9129C0D1B30018D309 /* Model */,
 				29317A7D29C0D10A0018D309 /* AppDelegate.swift */,
 				29317A7F29C0D10A0018D309 /* SceneDelegate.swift */,
-				29317A8129C0D10A0018D309 /* CountriesViewController.swift */,
 				29317A8329C0D10A0018D309 /* Main.storyboard */,
 				29317A8629C0D10C0018D309 /* Assets.xcassets */,
 				29317A8829C0D10C0018D309 /* LaunchScreen.storyboard */,
 				29317A8B29C0D10C0018D309 /* Info.plist */,
-				29AE5E9D29C0DAD90037FDA8 /* CountriesTableViewCell.swift */,
-				29AE5E9E29C0DAD90037FDA8 /* CountriesTableViewCell.xib */,
-				29AE5EA129C0DF490037FDA8 /* CountriesViewModel.swift */,
-				29AE5EAF29C116060037FDA8 /* DetailsViewController.swift */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
 		};
-		29317A9129C0D1B30018D309 /* Countries Networking  */ = {
+		29317A9129C0D1B30018D309 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				29AE5EA129C0DF490037FDA8 /* CountriesViewModel.swift */,
 				29317A9229C0D1D10018D309 /* CountriesModel.swift */,
 				29317A9429C0D1EE0018D309 /* CountriesRequest.swift */,
 				29AE5E9729C0D5EB0037FDA8 /* CountriesOperation.swift */,
-				29AE5EB129C118F30037FDA8 /* MapViewController.swift */,
 			);
-			path = "Countries Networking ";
+			path = Model;
 			sourceTree = "<group>";
 		};
 		29317A9C29C0D3540018D309 /* Networking */ = {

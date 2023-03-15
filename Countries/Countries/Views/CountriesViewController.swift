@@ -49,7 +49,8 @@ class CountriesViewController: UIViewController {
         searchBar.backgroundColor = UIColor.clear
         searchBar.isTranslucent = true
         searchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
-        searchBar.searchTextField.backgroundColor = .clear
+        searchBar.searchTextField.backgroundColor = .black.withAlphaComponent(0.4)
+        
         searchBar.delegate = self
     }
 }

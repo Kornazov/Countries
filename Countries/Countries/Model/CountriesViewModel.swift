@@ -37,13 +37,17 @@ class CountriesViewModel {
     }
     
     func filterData() {
-        if let searchText = searchText, searchText.count > 2 {
+        guard let searchText = searchText else {
+            filterCountries = countries
+            delegate?.reloadData()
+            return
+        }
+        
+        if searchText.count > 2 {
             filterCountries = countries?.filter({ ($0.name.lowercased().contains(searchText))})
             delegate?.reloadData()
             return
         }
-        filterCountries = countries
-        delegate?.reloadData()
     }
 }
 

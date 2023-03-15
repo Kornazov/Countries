@@ -81,7 +81,7 @@
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kg6-mG-ehK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Kg6-mG-ehK" firstAttribute="trailing" secondItem="8ps-ik-jwg" secondAttribute="trailing" constant="-10" id="OvN-8F-HfP"/>
                             <constraint firstItem="8ps-ik-jwg" firstAttribute="top" secondItem="Kg6-mG-ehK" secondAttribute="top" constant="-10" id="QCY-Lu-OgO"/>
